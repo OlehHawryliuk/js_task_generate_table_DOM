@@ -359,7 +359,7 @@ const people = [
 for (const person of people) {
   const row = document.createElement('tr');
 
-  document.querySelector('.dashboard').append(row);
+  document.querySelector('.dashboard').appendChild(row);
 
   const fullName = document.createElement('td');
 
