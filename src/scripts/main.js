@@ -357,11 +357,9 @@ const people = [
 // eslint-disable-next-line no-console
 
 for (const person of people) {
-  const board = document.querySelector('.dashboard');
-
   const row = document.createElement('tr');
 
-  board.append(row);
+  document.querySelector('.dashboard').append(row);
 
   const fullName = document.createElement('td');
 
