@@ -365,33 +365,33 @@ for (const person of people) {
 
   const fullName = document.createElement('td');
 
-  fullName.textContent(person.name);
+  fullName.textContent = person.name;
 
   const gender = document.createElement('td');
 
   if (person.sex === 'f') {
-    gender.textContent('female');
+    gender.textContent = 'Female';
   } else {
-    gender.textContent('Male');
+    gender.textContent = 'Male';
   }
 
   const birthDate = document.createElement('td');
 
-  birthDate.textContent(person.born);
+  birthDate.textContent = person.born;
 
   const deathDate = document.createElement('td');
 
-  deathDate.textContent(person.died);
+  deathDate.textContent = person.died;
 
   const age = document.createElement('td');
 
-  age.textContent(person.died - person.born);
+  age.textContent = person.died - person.born;
 
   const century = document.createElement('td');
 
-  century.textContent(Math.ceil(Number(person.died) / 100));
+  century.textContent = Math.ceil(person.died / 100);
 
-  const list = [fullName, gender, birthDate, deathDate, century];
+  const list = [fullName, gender, birthDate, deathDate, age, century];
 
   for (const item of list) {
     row.append(item);
